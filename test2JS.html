@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head> 
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<Title> Titre onglet </title>
+	</head>
+
+	
+	
+    <body>
+        <button id="b1">Clique ici</button> <br/> <br/>
+
+		
+		<p id="msg"> </p>
+
+
+
+        <script type="text/javascript" src="fichier.js"></script>
+    </body>
+
+    <script>
+    	
+    	document.getElementsByTagName("body")[0]
+  .addEventListener("click", function(evt) {
+    var msg = document.getElementById("msg");
+    if (evt.target.tagName === "BUTTON") {
+        msg.textContent = "Bravo, tu n'as pas parkinson !" +
+           evt.target.textContent;
+    } else {
+        console.log(evt.target);
+        msg.textContent = "T'es trop naze, apprends à cliquer !";
+    }
+});
+
+    </script>
+
+</html>

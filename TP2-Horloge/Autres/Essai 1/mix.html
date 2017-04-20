@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <Title> TP - Horloge </title>
+        <script type="text/javascript" src="mix_script.js"></script>
+    </head>
+    
+    <body>
+        <div id="reveil">
+            <div id="horloge">
+                <br />
+                <strong><span id="heure_actuelle"><strong>00</strong></span></strong> :
+                <strong><span id="minute_actuelle"><strong>00</strong></span></strong> :
+                <strong><span id="seconde_actuelle"><strong>00</strong></span></strong>
+            </div>
+            <br />  <br />
+
+
+            <div id="zone">
+                <div id="clock">
+
+                    <form>
+                        <input type="checkbox" name="checkbx_alarm" id="checkbx_alarm"/>
+
+                        <input type="number" name="heure" id="heure" min="0" max="23"/>
+
+                        <input type="number" name="minute" id="minute" min="0" max="59"/>
+                        
+                        <input type="text" name="nom_alarm" id="nom_alarm"/>
+
+                            <select name="sonnerie" id="list_sons" size="1">
+                                <option>Sound 1</option>
+                                <option>Sound 2</option>
+                                <option>Sound 3</option>
+                                <option>Sound 4</option>
+                                <option>Sound 5</option>
+                            </select>
+
+                        <input type="button" id="button_less" value=" - " />
+                    </form>
+                    <br /> <br />
+                </div>
+            </div>
+
+            <form>
+                <input type="button" id="button_plus" value=" + "/>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Aide bouton JS</title>
+<script language="JavaScript">
+function ajouter(id)
+{
+ var tableau1 = document.getElementById("tableau1"); // On défini notre tableau 1
+ var tableau2 = document.getElementById("tableau2").rows; // ------------ tableau 2
+    var ligne = tableau1.insertRow(-1); //On insére une nouvelle ligne a la fin du tableau avec -1
+ 
+    var colonne1 = ligne.insertCell(0); // on cree une noubelle cellule
+    colonne1.innerHTML += tableau2[id].cells[0].innerHTML; // on insére dans cette cellule la valeur présente dans le tableau 2
+ 
+ var colonne2 = ligne.insertCell(1);
+    colonne2.innerHTML += tableau2[id].cells[1].innerHTML;;
+
+    var colonne3 = ligne.insertCell(2);
+    colonne3.innerHTML += tableau2[id].cells[2].innerHTML;;
+ 
+ var colonne4 = ligne.insertCell(3);
+    colonne4.innerHTML += tableau2[id].cells[3].innerHTML;;
+
+    var colonne5 = ligne.insertCell(4);
+    colonne5.innerHTML +="<input type='button' value='-' onclick='supprimer(this.parentNode.parentNode.rowIndex);'/>"; // on insere un boutton qui permettra de faire la suppression
+}
+
+function supprimer(id)
+{
+ document.getElementById("tableau1").deleteRow(id); // on supprime la ligne 
+}
+
+</script>
+</head>
+
+<body>
+
+<table style='border:5px solid black;' id="tableau1">
+   <tr>
+  <th>ID</th>
+  <th>Nom</th>
+  <th>Prenom</th>
+  <th>Service</th>
+  <th>Supprimer</th>
+   </tr>
+
+</table>
+</br>
+</br>
+
+<table style='border:5px solid black;' id="tableau2">
+   <tr>
+  <th>ID</th>
+  <th>Nom</th>
+  <th>Prenom</th>
+  <th>Service</th>
+  <th>Ajouter</th>
+   </tr>
+
+   <tr>
+  <td>1</td>
+  <td>Java</td>
+  <td>Script</td>
+  <td>Informatique</td>
+  <td><input type='button' value='+' onclick='ajouter(this.parentNode.parentNode.rowIndex);'/></td>
+   </tr>
+ 
+   <tr>
+  <td>2</td>
+  <td>PhP</td>
+  <td>SQL</td>
+  <td>Informatique</td>
+  <td><input type='button' value='+' onclick='ajouter(this.parentNode.parentNode.rowIndex);'/></td>
+   </tr>
+</table>
+
+</body>
+
+</html>

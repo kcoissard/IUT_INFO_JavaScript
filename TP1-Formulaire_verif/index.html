@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<HEAD> 
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="moncss.css" />
+		<Title> Exo 1 - JavaScript </title>
+	</HEAD>
+	
+	
+<body>
+    <form>
+        <fieldset>
+            <legend> Votre compte </legend>
+            
+            <label for="prenom"> Quel est votre prénom ? </label>
+            <input type="text" name="prenom" id="prenom" onblur="verifPrenom(this)"/>
+            <br/><br/>
+            
+            <label for="nom"> Quel est votre nom ? </label>
+            <input type="text" name="nom" id="nom" onblur="verifNom(this)"/>
+            <br/><br/>
+            
+            <label for="identifiant">Saisissez un identifiant : <em>(lettres uniquement)</em> </label>
+            <input type="text" name="identifiant" id="identifiant" maxlength="11" onblur="verifIdentifiant(this)"/>
+            <br/><br/>
+            
+            <label for="age"> Quel est votre âge ? </label>
+            <input type="number" name="age" id="age" min="18"  onblur="verifAge(this)"/>
+            <br/><br/>
+            
+            <label for="mdp1"> Entrez un mot de passe : </label>
+            <input type="password" name="mdp1" id="mdp1" onblur="mdpEgaux()"/>
+            <br/><br/>
+            
+            <label for="mdp2"> Entrez le à nouveau : </label>
+            <input type="password" name="mdp2" id="mdp2" onblur="mdpEgaux()"/>
+            <br/><br/>
+            
+            <label for="cgu">'' J'accèpte les CGU '' </label>
+            <input type="checkbox" name="cgu" id="cgu"/> 
+            <br/><br/>
+            <input  onclick="bouttonDisabled();" type="button" name="button" value="Envoyer" disabled/> 
+        </fieldset>
+    </form>
+    
+    <script type="text/javascript" src="s1_script_externe.js">
+    
+    </script>
+
+</body>
+	
+	
+</html>

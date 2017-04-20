@@ -1,0 +1,20 @@
+
+Sujet
+
+    Créez un formulaire contenant les champs suivants : Prénom, Nom, Age, Identifant, Mot de passe (2 fois), et une case à cocher « J’accèpte les CGU ».
+    Le bouton de soumission est grisé, et ne s’active que lorsque les conditions ci-dessous sont toutes satisfaites :
+      V l’age est un entier supérieur ou égal à 18 ; 
+      V l’identifiant est composé de moins de 12 caractères, seulement des lettres ;
+        le mot de passe est suffisamment « fort » (cf. ci-dessous) ;
+      V le deuxième mot de passe est identique au premier ;
+        les CGU ont été acceptées.
+
+    La force du mot de passe doit s’afficher (en %) à coté du mot de passe ; les 5 critères suivants y contribuent à 20% chacun:
+        il doit faire au moins 8 caractères,
+        il doit contenir au moins une lettre minuscule,
+        il doit contenir au moins une lettre majuscule,
+        il doit contenir au moins un chiffre,
+        il doit contenir au moins un caractère qui ne soit ni une lettre, ni un chiffre.
+    Par ailleurs, le formulaire doit indiquer le plus explicitement possible à l’utilisateur ce qu’on attend de lui (textes d’aide, mise en évidence...).
+
+NB: Vous pourriez trouver utile l’annexe ci-après.

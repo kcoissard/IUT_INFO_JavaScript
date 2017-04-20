@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset = "utf-8" />
+      <link rel="stylesheet" href="style.css" />
+      <Title> TP - Horloge </title>
+  </head>
+
+  <body>
+  <h1> TP - HORLOGE et REVEIL </h1>
+  <h2> Kévin COISSARD - ASPE</h2>
+    <div id="alarm">
+      <div id="temps_actuel">
+        <span id="heure_actuelle"></span>
+        <span id="minute_actuelle"></span>
+        <span id="seconde_actuelle"></span>
+      </div>
+
+      
+      <div class="alarm" id="0">
+        <input type="checkbox" class="checkbox_alarm"/>
+        <input type="number" min="0" max="23" class="heures" />
+        <input type="number" min="0" max="59" class="minutes" />
+        <input type="text" class="intitule_alarm" />
+        <select class="alarm_sound">
+          <option value="1" selected="true">Alarm 1</option>
+          <option value="2">Alarm 2</option>
+          <option value="3">Alarm 3</option>
+          <option value="4">Alarm 4</option>
+          <option value="5">Alarm 5</option>
+        </select>
+        <button class="delete">-</button>
+      </div>
+    </div>
+    <div id="add">
+      <button id="ajouter_alarm">+</button>
+    </div>
+
+    <script src="alarm.js"></script>
+  </body>
+</html>
